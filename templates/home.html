@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        
+        .hero-image {
+            max-width: 100%;
+            height: auto;
+        }
+        .container {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark " style="background-color: #1b2025 !important;">
+        <div class="container">
+            <img src="{{ url_for('static', filename='Images/mycsueb_navbar.png') }}" alt="CSUEB" style="height: 50px;">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/login">Login</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="/register">Register</a>
+                    </li> -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+   </header>
+
+    <!-- Main content -->
+    <div class="container">
+        <div class="row justify-content-center mt-5">
+            <div class="col-12">
+                <img src="{{ url_for('static', filename='Images/csuebentry.png') }}" alt="CSUEB" class="hero-image">
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK3++FzD9op8z8c5L4/1vhVbVYj7xyn9+O+4vG9zFFpG3D" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UOaD0W5nbn4W/2fC0d8B5wV6M08+4c7mVj9fsN9i5g1kI3+G9F9zzrL6kUeY0uU8" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+6L+2bT1M5Nf/5Ff5k2IW5kncV/5MHi/5R19SAI4k" crossorigin="anonymous"></script>
+</body>
+</html>

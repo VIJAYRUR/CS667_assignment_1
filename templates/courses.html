@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+</head>
+<body>
+     <!-- Navbar -->
+     <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="background-color: #1b2025 !important;">
+        <img src="{{ url_for('static', filename='Images/mycsueb_navbar.png') }}" alt="CSUEB" style="height: 50px;">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <!-- <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                </li> -->
+                {% if 'email' in session %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('logout') }}">Logout</a>
+                    </li>
+                {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('login') }}">Login</a>
+                    </li>
+                {% endif %}
+                <!-- <li class="nav-item">
+                    <a class="nav-link" href="/register">Register</a>
+                </li> -->
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Static Courses Section -->
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Available Courses</h1>
+        <div class="row">
+            <!-- Course 1 -->
+            <div class="col-md-4 mb-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="{{ url_for('static', filename='Images/ML_course.jpg') }}" class="card-img-top" alt="CS 667">
+                    <div class="card-body">
+                        <h5 class="card-title">CS 667 MACHINE LEARNING</h5>
+                        <p class="card-text">Learn the fundamentals of machine learning, including supervised and unsupervised learning techniques.</p>
+                        <a href="#" class="btn btn-primary">Enroll</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Course 2 -->
+            <div class="col-md-4 mb-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="{{ url_for('static', filename='Images/ALGO_course.jpg') }}" class="card-img-top" alt="CS 601">
+                    <div class="card-body">
+                        <h5 class="card-title">CS 601 ADVANCED ALGO</h5>
+                        <p class="card-text">Deep dive into advanced algorithms and their applications in problem-solving and data analysis.</p>
+                        <a href="#" class="btn btn-primary">Enroll</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Course 3 -->
+            <div class="col-md-4 mb-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="{{ url_for('static', filename='Images/cybersec_course.png') }}" class="card-img-top" alt="CS 671">
+                    <div class="card-body">
+                        <h5 class="card-title">CS 671 CYBER SEC</h5>
+                        <p class="card-text">Explore the principles of cybersecurity and techniques to protect systems and data from threats.</p>
+                        <a href="#" class="btn btn-primary">Enroll</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Course 4 -->
+            <div class="col-md-4 mb-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="{{ url_for('static', filename='Images/PLC_course.avif') }}"  class="card-img-top" alt="CS 311">
+                    <div class="card-body">
+                        <h5 class="card-title">CS 311 PROG LANG CONCEPT</h5>
+                        <p class="card-text">Study programming languages and their conceptual foundations, including syntax, semantics, and paradigms.</p>
+                        <a href="#" class="btn btn-primary">Enroll</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Course 5 -->
+            <div class="col-md-4 mb-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="{{ url_for('static', filename='Images/comp_arc.jpg') }}" class="card-img-top" alt="CS 321">
+                    <div class="card-body">
+                        <h5 class="card-title">CS 321 COMP ARCH</h5>
+                        <p class="card-text">Understand the architecture and organization of computer systems, including hardware and performance considerations.</p>
+                        <a href="#" class="btn btn-primary">Enroll</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Course 6 -->
+            <div class="col-md-4 mb-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="{{ url_for('static', filename='Images/web_systems.png') }}"  class="card-img-top" alt="CS 651">
+                    <div class="card-body">
+                        <h5 class="card-title">CS 651 WEB SYSTEMS</h5>
+                        <p class="card-text">Learn about web system design and development, including front-end and back-end technologies.</p>
+                        <a href="#" class="btn btn-primary">Enroll</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+</body>
+</html>
