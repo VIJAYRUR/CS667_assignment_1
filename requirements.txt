@@ -1,0 +1,15 @@
+bcrypt==4.2.0
+blinker==1.8.2
+click==8.1.7
+dnspython==2.6.1
+Flask==3.0.3
+Flask-WTF==1.2.1
+importlib_metadata==8.5.0
+itsdangerous==2.2.0
+Jinja2==3.1.4
+jsonify==0.5
+MarkupSafe==2.1.5
+pymongo==4.8.0
+Werkzeug==3.0.4
+WTForms==3.1.2
+zipp==3.20.2
